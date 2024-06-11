@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+#wordDisplay {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#message {
+    color: red;
+    margin: 10px 0;
+}
+
+#wrongLetters {
+    margin: 10px 0;
+}
+
+#hangman {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    margin: 20px auto;
+    border-left: 5px solid #000;
+    border-top: 5px solid #000;
+}
+
+.part {
+    display: none;
+    position: absolute;
+}
+
+.head {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    top: 30px;
+    right: -20px;
+}
+
+.body {
+    width: 5px;
+    height: 80px;
+    background-color: #000;
+    top: 70px;
+    right: 0;
+}
+
+.left-arm,
+.right-arm {
+    width: 5px;
+    height: 50px;
+    background-color: #000;
+    top: 80px;
+}
+
+.left-arm {
+    transform: rotate(-45deg);
+    right: -25px;
+}
+
+.right-arm {
+    transform: rotate(45deg);
+    right: 25px;
+}
+
+.left-leg,
+.right-leg {
+    width: 5px;
+    height: 50px;
+    background-color: #000;
+    top: 150px;
+}
+
+.left-leg {
+    transform: rotate(-45deg);
+    right: -20px;
+}
+
+.right-leg {
+    transform: rotate(45deg);
+    right: 20px;
+}
+
+#keyboard button {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#reset {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #hangman {
+        width: 100px;
+        height: 150px;
+    }
+
+    .head {
+        width: 20px;
+        height: 20px;
+        border-width: 3px;
+        top: 15px;
+        right: -10px;
+    }
+
+    .body {
+        height: 40px;
+        top: 40px;
+    }
+
+    .left-arm, .right-arm {
+        height: 30px;
+        top: 50px;
+    }
+
+    .left-leg, .right-leg {
+        height: 30px;
+        top: 90px;
+    }
+
+    #wordDisplay {
+        font-size: 1.5rem;
+    }
+
+    #keyboard button {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+}
